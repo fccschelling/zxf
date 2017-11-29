@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>首页</title>
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1">
+    <meta name="format-detection" content="telephone=yes">
+    <meta name="msapplication-tap-highlight" content="no">
+    <link rel="stylesheet" href="css/css.css"/>
+</head>
+<body>
+	<section class="main_box">
+		<article class="signin_allbox" style="display: none;"><!--签到-->
+			<section class="opacity_box">
+				<div class="bg_opacity"></div>
+				<div class="message_box">
+				 	<div class="header_lrbox">
+						<div class="header_left">
+							<img src="img/left_right_img.png" width="100%" />
+						</div>
+						<div class="header_right">
+							<img src="img/left_right_img.png" width="100%"/>
+						</div>
+					</div>
+					<div class="sign_in_title">
+						<h5>签到成功</h5>
+						<p class="sign_hit">您已累计签到<span class="color_hit">XX</span>次</p>
+						<p>5次签到可兑换1次抽奖机会<br/>
+						   请前往<a class="color_hit">抽奖中心</a>兑换<br/>
+						   众多惊喜等着您
+						</p>
+					</div>
+				</div>
+			</section>
+		</article>
+
+		<header class="index_header">
+			<img src="img/logo.png" width="100%"/>
+		</header>
+		<article class="index_title">
+			<img src="img/title.png" width="100%" />
+		</article>
+		<article class="index_message">
+			<div class="text_box">
+				<div class="field_box">
+					产品名称：10元张新发
+				</div>
+				<div class="field_box">
+					生产日期：2016-12-01
+				</div>
+				<div class="field_box">
+					销售区域：&nbsp;长沙岳麓区&nbsp;
+				</div>
+				<div class="field_box">
+					生产厂家：湖南皇爷食品有限公司
+				</div>			
+			</div>
+			<div class="message_bg"></div>
+		</article>
+
+		<article class="allred_box">
+			<div class="one_part">
+				<div class="card_box">
+					<!--背面-->
+					<div class="positive_box flip">
+						<img src="img/zhang.jpg" width="100%" />
+					</div>
+					<!--正面-->
+					<div class="negative_box flip">
+						<img src="img/negative_bg.jpg"width="100%"/>
+						<div class="negative_conter center_vertical"> 
+							<div class="round_box">	
+								<img src="img/round_img.png" width="100%"/>
+								<span class="number_text">發</span>
+							</div>
+							<div class="text_hidden">
+								<p>
+									集字活动<br/>
+									赢取<font color="#fff">888元</font>红包<br/>
+									点击下方按钮了解详情<br/>
+									↓↓↓
+								</p>
+								<a class="btn_enter" href="friend_center.html">进入发友中心</a>
+							</div>
+						</div>
+					</div>
+					<!--手指-->
+					<div class="finger_box" style="display: none;">
+						<img src="img/finger_img.png" width="100%"/>
+					</div>
+				</div>
+			</div>
+			<div class="two_part">
+				<div class="card_box">
+					<!--背面-->
+					<div class="positive_box flip">
+						<img src="img/xin.jpg" width="100%"/>
+					</div>
+					<!--正面-->
+					<div class="negative_box flip">
+						<img src="img/negative_bg.jpg"width="100%"/>
+						<div class="negative_conter">
+							<div class="bg_notbox">
+								<div class="header_lrbox">
+									<div class="header_left">
+										<img src="img/left_right_img.png" width="100%" />
+									</div>
+									<div class="header_right">
+										<img src="img/left_right_img.png" width="100%"/>
+									</div>
+								</div>
+								<article>
+									<p>很遗憾<br/>没有中奖</p>
+									<span>感谢支持正品张新发！</span>
+								</article>
+							</div>
+							<div class="text_hidden">
+								<a class="btn_enter" href="friend_center.html">进入发友中心</a>
+							</div>
+						</div>
+					</div>
+				</div>				
+			</div>
+			<div class="three_part">
+				<div class="card_box">
+					<!--背面-->
+					<div class="positive_box flip">
+						<img src="img/fa.jpg" width="100%"/>
+					</div>
+					<!--正面-->
+					<div class="negative_box flip">
+						<img src="img/negative_bg.jpg"width="100%"/>
+						<div class="negative_conter">
+							<div class="money_box">
+								<div class="redpack_logo">
+									<img src="img/red_pack_logo.png" width="100%" />
+								</div>
+								<p>正品奖励红包</p>
+								<div class="money_number">	
+									<div class="header_lrbox">
+										<div class="header_left">
+											<img src="img/left_right_img.png" width="100%" />
+										</div>
+										<div class="header_right">
+											<img src="img/left_right_img.png" width="100%"/>
+										</div>
+									</div>						
+									<span>88.00元</span>
+								</div>
+							</div>
+							<div class="text_hidden">
+								<p>微信红包发放中<span class="dotting"></span></p>
+								<a class="btn_enter" href="friend_center.html">进入发友中心</a>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+			<div class="position_box">
+				<img src="img/zhang.jpg" width="100%"/>
+			</div>
+		</article>
+	</section> 
+</body>
+<script src="js/jquery.js"></script>
+<script type="text/javascript">
+ 	$(function(){
+	$(".card_box").bind("click", function() {
+		$('.card_box .negative_box').addClass("out");
+		$this_parent=$(this).parent();
+		$this_parent.css({'z-index':"999"});
+ 		$(' .card_box .positive_box').addClass("out").removeClass("in");
+	    setTimeout(function() {
+	        $('.card_box .negative_box').addClass("in").removeClass("out");
+	    },225);
+	    setTimeout(function() {
+			var $part=$this_parent.attr('class');
+			if($part=='one_part'){
+				$('.two_part').animate({left:"0"});
+			}else if($part=='three_part'){
+				$('.two_part').animate({left:"66%"});
+			} $this_parent.addClass("open_card");},500); 
+
+	    // setTimeout(function(){
+	    // 	$this_parent.addClass("open_card");
+	    // },0)
+		$('.card_box').unbind();
+
+	}); 
+	});
+</script>
+</html>
